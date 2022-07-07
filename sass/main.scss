@@ -1,0 +1,8 @@
+@use 'base/reset';
+@use 'base/normalize';
+@use 'base/typography';
+@use 'utils/variables';
+
+section img {
+	max-width: 100vw;
+}

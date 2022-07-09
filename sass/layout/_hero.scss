@@ -8,18 +8,11 @@
 	&__title {
 		margin: 0 auto;
 		max-width: 90%;
-		font-size: 1.6rem;
-		font-weight: 900;
-		// border: 1px solid blue;
 	}
 
 	&__text {
 		margin-block: 1rem 2rem;
 		font-size: 18px;
-		font-weight: 300;
-	}
-
-	.btn {
-		// margin: 2rem;
+		color: $clr-bg-dark;
 	}
 }

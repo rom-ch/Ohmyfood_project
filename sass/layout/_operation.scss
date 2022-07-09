@@ -1,0 +1,56 @@
+@use '../utils' as *;
+@use 'sass:color';
+.operation {
+	padding: 2rem 1.5rem;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+		gap: 1.8rem;
+		position: relative;
+
+		&-item {
+			@include shadow;
+			background-color: $clr-bg-light-100;
+			border-radius: 1.2rem;
+			// overflow: hidden;
+			position: relative;
+		}
+
+		&-link {
+			display: flex;
+			padding: 1.7rem;
+			border-radius: 1.2rem;
+			font-weight: 700;
+
+			span {
+				margin-right: 1.5rem;
+				color: rgb($clr-neutral-900, 0.6);
+				transform: scale(1.2);
+			}
+
+			&:hover {
+				background-color: rgb($clr-primary, 0.1);
+			}
+		}
+	}
+}
+
+@for $i from 1 through 3 {
+	.list-item-#{$i}::before {
+		content: '#{$i}';
+		border-radius: 50%;
+		background-color: $clr-primary;
+		color: $clr-neutral-100;
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 0;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -3,11 +3,12 @@
 .btn {
 	display: block;
 	color: $clr-neutral-100;
-	background: linear-gradient(170deg, $clr-secondary, $clr-primary);
+	background: linear-gradient(175deg, $clr-secondary, 55%, $clr-primary);
 	font-size: 18px;
 	font-weight: 500;
 	padding: 1.1rem 1.3rem;
 	border-radius: 100px;
 	width: fit-content;
 	margin: 0 auto;
+	@include shadow;
 }

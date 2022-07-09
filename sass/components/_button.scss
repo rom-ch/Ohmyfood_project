@@ -10,5 +10,5 @@
 	border-radius: 100px;
 	width: fit-content;
 	margin: 0 auto;
-	@include shadow;
+	@include shadow(0, 4px, 10px);
 }

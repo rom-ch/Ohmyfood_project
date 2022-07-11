@@ -1,8 +1,12 @@
 @use '../utils' as *;
 
 .restaurant {
-	padding: 2rem 1.5rem;
+	padding: 2rem 1.5rem 4rem;
 	background-color: $clr-bg-light-100;
+
+	&__title {
+		margin-bottom: 2rem;
+	}
 }
 
 .card-container {

@@ -394,7 +394,7 @@ ul {
 }
 
 .operation {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 4rem;
 }
 .operation__list {
   display: flex;
@@ -422,6 +422,9 @@ ul {
 }
 .operation__list-link:hover {
   background-color: rgba(147, 86, 220, 0.1);
+}
+.operation__list-link:hover span {
+  color: #9356dc;
 }
 
 .list-item-1::before {
@@ -473,8 +476,11 @@ ul {
 }
 
 .restaurant {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 4rem;
   background-color: #f6f6f6;
+}
+.restaurant__title {
+  margin-bottom: 2rem;
 }
 
 .card-container {

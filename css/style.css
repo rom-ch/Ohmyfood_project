@@ -350,6 +350,65 @@ ul {
   box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
+.menu {
+  animation: menuShow 1s;
+}
+.menu .item {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: itemShow 0.5s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
+}
+
+@keyframes menuShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes itemShow {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.item:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.item:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.item:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.item:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.item:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
 .header {
   display: flex;
   justify-content: center;

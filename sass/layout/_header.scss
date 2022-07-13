@@ -4,9 +4,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-block: $size-20;
+	padding-block: 0.9rem;
 
-	&__logo {
-		width: 50%;
+	h1 {
+		font-family: $ff-shrik;
+		font-size: 2.5rem;
+		margin: 0;
 	}
 }

@@ -10,5 +10,10 @@
 	border-radius: 100px;
 	width: fit-content;
 	margin: 0 auto;
-	@include shadow(0, 4px, 10px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+	&:hover {
+		opacity: 0.8;
+		box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.4);
+	}
 }

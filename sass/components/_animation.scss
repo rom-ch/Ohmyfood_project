@@ -1,10 +1,10 @@
 .menu {
-	animation: menuShow 1s;
+	animation: menuShow 1.5s;
 
 	.item {
 		opacity: 0;
 		transform: translateY(-50px);
-		animation: itemShow 0.5s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
+		animation: itemShow 0.6s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
 	}
 }
 

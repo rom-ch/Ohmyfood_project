@@ -67,11 +67,15 @@
 	&__text {
 		width: 100%;
 		padding: 0.9rem 0.8rem;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 
 	&__title {
 		margin-bottom: 0.5rem;
 		font-size: 1.1rem;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 
 	&__group {
@@ -80,16 +84,16 @@
 		font-size: 0.9rem;
 
 		.subtitle {
-			max-width: 85%;
+			width: 200px;
+			flex-grow: 1;
 			text-overflow: ellipsis;
 			overflow: hidden;
-			height: 18.4px;
 			white-space: nowrap;
 		}
 
 		.price {
 			font-weight: 700;
-			margin-right: 0.5rem;
+			margin-inline: 0.5rem;
 		}
 	}
 

@@ -351,12 +351,12 @@ ul {
 }
 
 .menu {
-  animation: menuShow 1s;
+  animation: menuShow 1.5s;
 }
 .menu .item {
   opacity: 0;
   transform: translateY(-50px);
-  animation: itemShow 0.5s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
+  animation: itemShow 0.6s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
 }
 
 @keyframes menuShow {
@@ -414,11 +414,17 @@ ul {
   justify-content: center;
   align-items: center;
   padding-block: 0.9rem;
+  position: relative;
 }
 .header h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2.5rem;
   margin: 0;
+}
+.header a {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 30px;
 }
 
 .locate {
@@ -696,10 +702,14 @@ ul {
 .item__text {
   width: 100%;
   padding: 0.9rem 0.8rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .item__title {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item__group {
   display: flex;
@@ -707,15 +717,15 @@ ul {
   font-size: 0.9rem;
 }
 .item__group .subtitle {
-  max-width: 85%;
+  width: 200px;
+  flex-grow: 1;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 18.4px;
   white-space: nowrap;
 }
 .item__group .price {
   font-weight: 700;
-  margin-right: 0.5rem;
+  margin-inline: 0.5rem;
 }
 .item__check {
   background-color: #99e2d0;

@@ -56,9 +56,21 @@
 		}
 
 		&-icon {
-			width: 1.5rem;
-			height: 1.5rem;
-			background: linear-gradient(red, blue);
+			font-size: 1.5rem;
+			margin-right: 0.5rem;
+
+			i {
+				font-weight: 400;
+
+				&:hover {
+					font-weight: 900;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					color: transparent;
+					background-image: linear-gradient($clr-primary, $clr-secondary);
+				}
+			}
 		}
 	}
 }

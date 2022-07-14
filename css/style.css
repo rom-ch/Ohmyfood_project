@@ -317,6 +317,7 @@ template {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -407,6 +408,95 @@ ul {
 
 .item:nth-child(9) {
   animation-delay: 1.8s;
+}
+
+.content {
+  opacity: 0;
+  animation: content 1s 2s forwards;
+  max-height: 0;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loader 3s forwards;
+}
+
+@keyframes content {
+  100% {
+    opacity: 1;
+    max-height: 100%;
+  }
+}
+@keyframes loader {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+circle {
+  animation: scale 1.2s linear infinite;
+}
+
+@keyframes scale {
+  0%, 20%, 80%, 100% {
+    r: 10;
+  }
+  50% {
+    r: 15;
+  }
+}
+circle:nth-child(1) {
+  animation-delay: 0s;
+}
+
+circle:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+circle:nth-child(3) {
+  animation-delay: -0.2s;
+}
+
+circle:nth-child(4) {
+  animation-delay: -0.3s;
+}
+
+circle:nth-child(5) {
+  animation-delay: -0.4s;
+}
+
+circle:nth-child(6) {
+  animation-delay: -0.5s;
+}
+
+circle:nth-child(7) {
+  animation-delay: -0.6s;
+}
+
+circle:nth-child(8) {
+  animation-delay: -0.7s;
+}
+
+circle:nth-child(9) {
+  animation-delay: -0.8s;
+}
+
+circle:nth-child(10) {
+  animation-delay: -0.9s;
+}
+
+circle:nth-child(11) {
+  animation-delay: -1s;
+}
+
+circle:nth-child(12) {
+  animation-delay: -1.1s;
 }
 
 .header {
@@ -597,9 +687,19 @@ ul {
   margin-bottom: 0.2rem;
 }
 .card__body-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  background: linear-gradient(red, blue);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+.card__body-icon i {
+  font-weight: 400;
+}
+.card__body-icon i:hover {
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
 }
 
 .link:nth-child(-n+2) .card::after {
@@ -762,6 +862,8 @@ section img {
 
 body {
   font-family: "Roboto", sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

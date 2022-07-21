@@ -3,14 +3,3 @@
 @use 'components' as *;
 @use 'layout' as *;
 @use 'pages' as *;
-
-section img {
-	max-width: 100%;
-	display: block;
-}
-
-body {
-	font-family: $ff-roboto;
-	position: relative;
-	min-height: 100vh;
-}

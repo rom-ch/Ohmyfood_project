@@ -1,19 +1,27 @@
 @use '../utils' as *;
 @use 'sass:color';
 .operation {
-	padding: 2rem 1.5rem 4rem;
+	padding: 3rem 1.5rem;
+
+	&__title {
+		margin-top: 0;
+	}
+
 	&__list {
 		display: flex;
 		flex-direction: column;
 		margin-top: 2rem;
 		gap: 1.8rem;
 		position: relative;
+		padding: 0;
 
 		&-item {
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 			background-color: $clr-bg-light-100;
 			border-radius: 1.2rem;
 			position: relative;
+			width: 327px;
+			margin: 0 auto;
 		}
 
 		&-link {
@@ -26,6 +34,10 @@
 				margin-right: 1.5rem;
 				color: rgb($clr-neutral-900, 0.6);
 				transform: scale(1.2);
+			}
+
+			p {
+				margin: 0;
 			}
 
 			&:hover {

@@ -1,11 +1,11 @@
 @use '../utils' as *;
 
 .restaurant {
-	padding: 2rem 1.5rem 4rem;
+	padding: 3rem 1.5rem 4rem;
 	background-color: $clr-bg-light-100;
 
 	&__title {
-		margin-bottom: 2rem;
+		margin: 0 0 1.5rem;
 	}
 }
 
@@ -15,75 +15,4 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	position: relative;
-}
-
-.link {
-	border-radius: 1.2rem;
-}
-
-.card {
-	width: 100%;
-	border-radius: 1.2rem;
-	overflow: hidden;
-	box-shadow: 0 4px 15px 3px rgba(0, 0, 0, 0.1);
-	position: relative;
-
-	&__img {
-		// height: 70%;
-		height: 0;
-		padding-top: 50%;
-		position: relative;
-
-		img {
-			display: block;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-
-	&__body {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0.7rem 1rem;
-		font-size: 17px;
-
-		&-text h3 {
-			margin-bottom: 0.2rem;
-		}
-
-		&-icon {
-			font-size: 1.5rem;
-			margin-right: 0.5rem;
-
-			i {
-				font-weight: 400;
-
-				&:hover {
-					font-weight: 900;
-					background-clip: text;
-					-webkit-background-clip: text;
-					-moz-background-clip: text;
-					color: transparent;
-					background-image: linear-gradient($clr-primary, $clr-secondary);
-				}
-			}
-		}
-	}
-}
-
-.link:nth-child(-n + 2) .card::after {
-	content: 'Nouveau';
-	background-color: $clr-accent;
-	color: #068a6a;
-	font-size: 0.9rem;
-	font-weight: 700;
-	padding: 0.5rem 0.8rem;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	border-radius: 0.1rem;
 }

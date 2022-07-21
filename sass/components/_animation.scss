@@ -1,10 +1,10 @@
-.menu {
+.menu-container {
 	animation: menuShow 1.5s;
 
 	.item {
 		opacity: 0;
-		transform: translateY(-50px);
-		animation: itemShow 0.6s 1s forwards cubic-bezier(0.3, 1.4, 0.43, 0.99);
+		transform: translateY(30px);
+		animation: itemShow 0.5s 1.5s forwards ease-out;
 	}
 }
 
@@ -25,7 +25,7 @@
 	}
 }
 
-@for $i from 1 through 9 {
+@for $i from 1 through 3 {
 	.item:nth-child(#{$i}) {
 		animation-delay: #{$i * 0.2s};
 	}

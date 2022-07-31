@@ -69,8 +69,16 @@
 					-moz-background-clip: text;
 					color: transparent;
 					background-image: linear-gradient($clr-primary, $clr-secondary);
+					opacity: 0;
+					animation: iconShow 0.5s ease-out forwards;
 				}
 			}
 		}
+	}
+}
+
+@keyframes iconShow {
+	100% {
+		opacity: 1;
 	}
 }

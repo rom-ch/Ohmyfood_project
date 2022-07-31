@@ -151,8 +151,15 @@ img {
   -moz-background-clip: text;
   color: transparent;
   background-image: linear-gradient(#9356dc, #ff79da);
+  opacity: 0;
+  animation: iconShow 0.5s ease-out forwards;
 }
 
+@keyframes iconShow {
+  100% {
+    opacity: 1;
+  }
+}
 .item {
   background-color: #fff;
   display: flex;
@@ -597,6 +604,7 @@ circle:nth-child(12) {
 }
 .menu__title span i {
   font-weight: 400;
+  cursor: pointer;
 }
 .menu__title span i:hover {
   font-weight: 900;
@@ -605,6 +613,13 @@ circle:nth-child(12) {
   -moz-background-clip: text;
   color: transparent;
   background-image: linear-gradient(#9356dc, #ff79da);
+  opacity: 0;
+  animation: iconShow 0.5s ease-out forwards;
+}
+@keyframes iconShow {
+  100% {
+    opacity: 1;
+  }
 }
 .menu .btn {
   margin-top: 3rem;

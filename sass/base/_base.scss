@@ -21,3 +21,10 @@ img {
 	max-width: 100%;
 	display: block;
 }
+
+@media screen and (min-width: 992px) {
+	.main {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+}

@@ -1,5 +1,10 @@
 @use '../utils' as *;
 
+.bg-img {
+	aspect-ratio: 16 / 11;
+	object-fit: cover;
+}
+
 .menu-container {
 	background-color: $clr-bg-light-100;
 }
@@ -25,6 +30,19 @@
 
 		span {
 			margin-right: 0.5rem;
+
+			i {
+				font-weight: 400;
+
+				&:hover {
+					font-weight: 900;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-moz-background-clip: text;
+					color: transparent;
+					background-image: linear-gradient($clr-primary, $clr-secondary);
+				}
+			}
 		}
 	}
 
@@ -54,6 +72,78 @@
 			display: block;
 			position: relative;
 			top: 3px;
+		}
+	}
+}
+
+@media (min-width: 668px) and (max-width: 991px) {
+	.bg-img {
+		aspect-ratio: 16 / 9;
+	}
+
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		.food {
+			width: 45%;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.menu-container {
+		position: relative;
+
+		.bg-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.5;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.menu {
+		border-radius: 0;
+		top: 0;
+		background-color: transparent;
+
+		&__title {
+			justify-content: center;
+
+			span {
+				margin-left: 2rem;
+			}
+		}
+
+		.btn {
+			margin-bottom: 51px;
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+	}
+
+	.food {
+		max-width: 1000px;
+		width: 500px;
+		opacity: 0.9;
+
+		h2 {
+			font-weight: 700;
+		}
+
+		.item {
+			width: 100%;
 		}
 	}
 }

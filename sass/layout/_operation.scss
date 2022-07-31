@@ -20,7 +20,7 @@
 			background-color: $clr-bg-light-100;
 			border-radius: 1.2rem;
 			position: relative;
-			width: 327px;
+			width: 100%;
 			margin: 0 auto;
 		}
 
@@ -29,6 +29,7 @@
 			padding: 1.7rem;
 			border-radius: 1.2rem;
 			font-weight: 700;
+			justify-content: center;
 
 			span {
 				margin-right: 1.5rem;
@@ -66,5 +67,43 @@
 		top: 50%;
 		left: 0;
 		transform: translate(-50%, -50%);
+	}
+}
+
+@media (min-width: 668px) and (max-width: 991px) {
+	.operation {
+		&__list {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-item {
+				min-width: 186px;
+
+				span {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.operation {
+		grid-column: 6 / span 8;
+		padding-block: 1rem;
+		text-align: center;
+
+		&__list {
+			justify-content: center;
+			align-items: center;
+			width: auto;
+			gap: 1.5rem;
+
+			&-item {
+				width: 70%;
+				max-width: 570px;
+			}
+		}
 	}
 }

@@ -29,6 +29,12 @@ img {
   display: block;
 }
 
+@media screen and (min-width: 992px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
 .btn {
   display: block;
   color: #fff;
@@ -99,7 +105,6 @@ img {
 
 .card {
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   border-radius: 1.2rem;
   overflow: hidden;
@@ -217,15 +222,15 @@ img {
 .content {
   opacity: 0;
   animation: content 1s 2s forwards;
-  max-height: 0;
+  height: 100vh;
 }
 
 .spinner {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: loader 3s forwards;
+  animation: loader 2s forwards;
 }
 
 @keyframes content {
@@ -342,6 +347,11 @@ circle:nth-child(12) {
   bottom: 5px;
 }
 
+@media screen and (min-width: 992px) {
+  .locate {
+    grid-column: 1/span 12;
+  }
+}
 .hero {
   background-color: #f6f6f6;
   text-align: center;
@@ -357,6 +367,15 @@ circle:nth-child(12) {
   color: #353535;
 }
 
+@media screen and (min-width: 992px) {
+  .hero {
+    grid-column: 1/span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+}
 .operation {
   padding: 3rem 1.5rem;
 }
@@ -376,7 +395,7 @@ circle:nth-child(12) {
   background-color: #f6f6f6;
   border-radius: 1.2rem;
   position: relative;
-  width: 327px;
+  width: 100%;
   margin: 0 auto;
 }
 .operation__list-link {
@@ -384,6 +403,7 @@ circle:nth-child(12) {
   padding: 1.7rem;
   border-radius: 1.2rem;
   font-weight: 700;
+  justify-content: center;
 }
 .operation__list-link span {
   margin-right: 1.5rem;
@@ -448,6 +468,36 @@ circle:nth-child(12) {
   transform: translate(-50%, -50%);
 }
 
+@media (min-width: 668px) and (max-width: 991px) {
+  .operation__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .operation__list-item {
+    min-width: 186px;
+  }
+  .operation__list-item span {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .operation {
+    grid-column: 6/span 8;
+    padding-block: 1rem;
+    text-align: center;
+  }
+  .operation__list {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 1.5rem;
+  }
+  .operation__list-item {
+    width: 70%;
+    max-width: 570px;
+  }
+}
 .restaurant {
   padding: 3rem 1.5rem 4rem;
   background-color: #f6f6f6;
@@ -464,6 +514,28 @@ circle:nth-child(12) {
   position: relative;
 }
 
+@media (min-width: 668px) and (max-width: 991px) {
+  .restaurant .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurant .link {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant {
+    grid-column: 1/span 12;
+    padding-block: 1.5rem 2rem;
+  }
+  .restaurant .card-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .restaurant .card-container .link {
+    width: 25%;
+  }
+}
 .footer {
   padding: 1.5rem;
   background-color: #353535;
@@ -493,6 +565,11 @@ circle:nth-child(12) {
   margin: 0;
 }
 
+.bg-img {
+  aspect-ratio: 16/11;
+  object-fit: cover;
+}
+
 .menu-container {
   background-color: #f6f6f6;
 }
@@ -517,6 +594,17 @@ circle:nth-child(12) {
 }
 .menu__title span {
   margin-right: 0.5rem;
+}
+.menu__title span i {
+  font-weight: 400;
+}
+.menu__title span i:hover {
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
 }
 .menu .btn {
   margin-top: 3rem;
@@ -543,6 +631,66 @@ circle:nth-child(12) {
   display: block;
   position: relative;
   top: 3px;
+}
+
+@media (min-width: 668px) and (max-width: 991px) {
+  .bg-img {
+    aspect-ratio: 16/9;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex .food {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container {
+    position: relative;
+  }
+  .menu-container .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .menu {
+    border-radius: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  .menu__title {
+    justify-content: center;
+  }
+  .menu__title span {
+    margin-left: 2rem;
+  }
+  .menu .btn {
+    margin-bottom: 51px;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .food {
+    max-width: 1000px;
+    width: 500px;
+    opacity: 0.9;
+  }
+  .food h2 {
+    font-weight: 700;
+  }
+  .food .item {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,15 @@
 .content {
 	opacity: 0;
 	animation: content 1s 2s forwards;
-	max-height: 0;
+	height: 100vh;
 }
 
 .spinner {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	animation: loader 3s forwards;
+	animation: loader 2s forwards;
 }
 
 @keyframes content {
